@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Poppins:wght@300&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="to-top">
+        <i class="fa fa-caret-up"></i>
+    </div>
+
+
+    <header class="navbar navbar-expand-lg  position-fixed  py-4">
+        <div class="container ">
+            <a href="/" class="navbar-brand  text-white">Logo</a>
+            <button class="navbar-toggler navbar-dark d-lg-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                aria-label="Toggle navigation"></button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav  ml-auto" id="nav">
+                    <li class="nav-item"><a title="Home" class="nav-link active " href="#">HOME </a>
+                    </li>
+                    <li class="nav-item"><a title="Service" class="nav-link " href="#">SERVICE</a>
+                    </li>
+                    <li class="nav-item"><a title="Portofolio" class="nav-link " href="#">PORTOFOLIO</a>
+                    </li>
+                    <li class="nav-item"><a title="Blog" class="nav-link " href="/blog.html">BLOG</a></li>
+                    <li class="nav-item"><a title="Contact" class="nav-link " href="#">CONTACT</a>
+                    </li>
+                    <li><a href="" class="btn ml-sm-5 btn-outline-warning">Contact Me</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+
+
+
+    <section class="hero ">
+        <span></span>
+        <div class="jumbotron m-0 jumbotron-fluid min-vh-100 d-flex align-items-center justify-content-center"
+            style="background-image: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(img/hero.jpg);background-position:center;background-size:cover;">
+            <div class="container d-flex align-items-sm-center justify-content-center flex-column">
+                <h1 class="text-white animate top">Hello, I am</h1>
+                <h1 class="display-4 font-weight-bold text-warning animate bottom ">Muhammad Nor Kholit</h1>
+                <p class="lead text-white animate bottom">Pecinta Gendre Ecchi
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="about">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-md-6 mb-4 animate top">
+                        <h1 class="mb-4">About Me</h1><img src="img/person.jpg" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-md-6 animate bottom ">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quidem, illum eveniet molestias
+                            adipisci earum dignissimos corrupti totam explicabo similique sequi. Repellat similique
+                            autem repudiandae molestias fugiat nobis tempora sed. Dolorum aliquid culpa magni doloribus
+                            recusandae! Quas, ut! Illo, nemo?
+                        </p>
+
+                        <h3 class="display-5 text-capitalize">my skill</h3>
+                        <ul class="progress-box">
+                            <li>
+                                <div class="info text-uppercase  font-weight-bold">
+                                    javacsript
+                                </div>
+                                <div title="javacsript" class="progress-line"><span style="width: 70%;"
+                                        persen="80%"></span></div>
+                            </li>
+                            <li>
+                                <div class="info text-uppercase  font-weight-bold">
+                                    Html
+                                </div>
+                                <div title="Html" class="progress-line"><span style="width: 40%;" persen="40%"></span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info text-uppercase  font-weight-bold">
+                                    Php
+                                </div>
+                                <div title="Php" class="progress-line"><span style="width: 67%;" persen="67%"></span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="info text-uppercase  font-weight-bold">
+                                    Mysql
+                                </div>
+                                <div title="Mysql" class="progress-line"><span style="width: 90%;" persen="90%"></span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.querySelector("#s").addEventListener("input", function () {
+            let data = document.querySelectorAll(".data")
+            data.forEach(e => {
+                let data = document.querySelector("#s").value.toLowerCase()
+                let key = e.textContent
+
+                if (key.toLowerCase().includes(data.toLowerCase())) {
+                    e.style.display = ""
+                } else {
+                    e.style.display = "none"
+
+                }
+            })
+        })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>
